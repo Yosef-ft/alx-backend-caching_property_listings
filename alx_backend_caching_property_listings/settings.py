@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'properties',
     'django_redis',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,7 @@ CACHES = {
         "LOCATION": "redis://redis:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+        },
+        "KEY_PREFIX": "property_listing",
     }
 }
